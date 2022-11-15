@@ -32,6 +32,7 @@ Metadata:
       Parameters:
       - FileShareVolumeSize
       - FileShareThroughputCapacity
+      - FileShareAlias
     - Label:
         default: Microsoft SQL Server FCI configurations
       Parameters:
@@ -87,6 +88,8 @@ Metadata:
         default: File share volume size in GB e.g 24
       FileShareThroughputCapacity:
         default: File share throughput capacity (MB/s) e.g 16 MBps
+      FileShareAlias:
+        default: FSx Alias
       CreateNewAD:
         default: Boolean flag to create a new managed AD instance or use existing AD. Sample values are 'true' or 'false'
       ManagedADDirectoryId:
@@ -142,6 +145,10 @@ Parameters:
       - 512
       - 1024
       - 2048
+  FileShareAlias:
+    Default: ''
+    Description: FSx Alias
+    Type: String
   PrivateSubnet1ID:
     Description: ID of private subnet 1 in Availability Zone 1 for the Workload (e.g.,
       subnet-a0246dcd)
@@ -1497,6 +1504,8 @@ Resources:
       WindowsConfiguration:
         ThroughputCapacity:
           Ref: FileShareThroughputCapacity
+        Aliases:
+          - Ref: FileShareAlias
         WeeklyMaintenanceStartTime: '4:16:30'
         DailyAutomaticBackupStartTime: '01:00'
         AutomaticBackupRetentionDays: 30
