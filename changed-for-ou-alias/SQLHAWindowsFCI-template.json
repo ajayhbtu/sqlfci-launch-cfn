@@ -110,6 +110,12 @@
       "Description" : "Capacity of the volume used to store SQL Server files. Minimum value is 32 and maximum 65536. (GB)",
       "NoEcho" : false
     },
+    "FileShareAlias" : {
+      "Type" : "String",
+      "Default" : "",
+      "Description" : "FSx Alias",
+      "NoEcho" : false
+    },
     "AssetsS3RegionCode" : {
       "Type" : "String",
       "Default" : "s3.us-east-2",
@@ -433,7 +439,7 @@
         "Label" : {
           "default" : "FSX Configuration"
         },
-        "Parameters" : [ "SqlFSxFCIName", "FileShareVolumeSize", "FileShareThroughputCapacity" ]
+        "Parameters" : [ "SqlFSxFCIName", "FileShareVolumeSize", "FileShareThroughputCapacity", "FileShareAlias" ]
       }, {
         "Label" : {
           "default" : "AWS Launch Wizard Configuration"
@@ -501,6 +507,9 @@
         },
         "FileShareVolumeSize" : {
           "default" : "FCI share volume size"
+        },
+        "FileShareAlias" : {
+            "default" : "FSx Alias"
         },
         "RDGWTagPairs" : {
           "default" : "tag pairs for RDGW"
@@ -701,6 +710,9 @@
           },
           "FileShareThroughputCapacity" : {
             "Ref" : "FileShareThroughputCapacity"
+          },
+          "FileShareAlias": {
+            "Ref" : "FileShareAlias"
           },
           "RDGWTagPairs" : {
             "Ref" : "RDGWTagPairs"

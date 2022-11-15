@@ -111,7 +111,8 @@
                         "SqlFSxFCIName",
                         "FileShareVolumeSize",
                         "FileShareThroughputCapacity",
-                        "FSXDomainMemberSGID"
+                        "FSXDomainMemberSGID",
+                        "FileShareAlias"
                     ]
                 },
                 {
@@ -265,6 +266,9 @@
                 },
                 "FileShareVolumeSize": {
                     "default": "FCI share volume size"
+                },
+                "FileShareAlias": {
+                    "default": "FSx Alias"
                 },
                 "FSXDomainMemberSGID": {
                     "default": "Domain Member security group ID for FSX"
@@ -651,6 +655,11 @@
         "FileShareThroughputCapacity": {
             "Default": "8",
             "Description": "File share throughput capacity, in 2 to the n'th power increments, where 3 <= n <= 11, i.e. (between 2^3 and 2^11).",
+            "Type": "String"
+        },
+        "FileShareAlias": {
+            "Default": "",
+            "Description": "FSx Alias",
             "Type": "String"
         },
         "DeviceNames": {
@@ -3367,6 +3376,9 @@
                     "FileShareThroughputCapacity": {
                         "Ref": "FileShareThroughputCapacity"
                     },
+                    "FileShareAlias": {
+                        "Ref": "FileShareAlias"
+                    },
                     "SQLAdminAccounts": {
                         "Ref": "SQLServiceAccount"
                     },
@@ -3646,6 +3658,9 @@
                     },
                     "FileShareThroughputCapacity": {
                         "Ref": "FileShareThroughputCapacity"
+                    },
+                    "FileShareAlias": {
+                        "Ref": "FileShareAlias"
                     },
                     "SQLAdminAccounts": {
                         "Ref": "SQLServiceAccount"
