@@ -620,7 +620,7 @@
             "Default": ""
         },
         "VolumeSizes": {
-            "Default": "100,500,500,500",
+            "Default": "400,500,500,500",
             "Description": "Volume sizes for the SQL Data, Logs and TempDb volumes, in GiB",
             "Type": "String"
         },
@@ -633,12 +633,12 @@
                 "io2",
                 "gp3"
             ],
-            "Default": "gp2",
+            "Default": "gp3",
             "Description": "Volume type for the SQL Data, Logs and TempDb volumes",
             "Type": "String"
         },
         "VolumeIopsValues": {
-            "Default": "5000,5000,5000,5000",
+            "Default": "3000,3000,3000,3000",
             "Description": "Default provisioned IOPs for the Root Drive, SQL Data, Logs and TempDb (for io1 volumes)",
             "Type": "String"
         },

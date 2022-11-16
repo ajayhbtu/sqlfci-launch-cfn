@@ -232,7 +232,7 @@
     },
     "VolumeIopsValues" : {
       "Type" : "String",
-      "Default" : "8000",
+      "Default" : "3000",
       "Description" : "Default provisioned IOPs for the Root Drive, SQL Data, Logs and TempDb (for io1 volumes)",
       "NoEcho" : false
     },
@@ -285,7 +285,7 @@
     },
     "VolumeSizes" : {
       "Type" : "String",
-      "Default" : "100,N/A,N/A,N/A",
+      "Default" : "400,N/A,N/A,N/A",
       "Description" : "Volume sizes for the SQL Data, Logs and TempDb volumes, in GiB",
       "NoEcho" : false
     },
