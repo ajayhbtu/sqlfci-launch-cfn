@@ -967,8 +967,8 @@ Resources:
       BlockDeviceMappings:
       - DeviceName: "/dev/sda1"
         Ebs:
-          VolumeSize: '100'
-          VolumeType: gp2
+          VolumeSize: '400'
+          VolumeType: gp3
       KeyName:
         Ref: KeyPairName
       UserData: !Base64
@@ -1463,8 +1463,8 @@ Resources:
       BlockDeviceMappings:
       - DeviceName: "/dev/sda1"
         Ebs:
-          VolumeSize: '100'
-          VolumeType: gp2
+          VolumeSize: '400'
+          VolumeType: gp3
       KeyName:
         Ref: KeyPairName
       UserData: !Base64
@@ -2096,8 +2096,8 @@ Resources:
       BlockDeviceMappings:
       - DeviceName: "/dev/sda1"
         Ebs:
-          VolumeSize: '100'
-          VolumeType: gp2
+          VolumeSize: '400'
+          VolumeType: gp3
       KeyName:
         Ref: KeyPairName
       UserData: !Base64
@@ -2589,8 +2589,8 @@ Resources:
       BlockDeviceMappings:
       - DeviceName: "/dev/sda1"
         Ebs:
-          VolumeSize: '100'
-          VolumeType: gp2
+          VolumeSize: '400'
+          VolumeType: gp3
       KeyName:
         Ref: KeyPairName
       UserData: !Base64
